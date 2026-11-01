@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.log
+*.png
+headers.txt
+tokens.json
+pass.json
