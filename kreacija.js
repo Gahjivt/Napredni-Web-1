@@ -1,4 +1,4 @@
-import { getToken, issuePass } from "./src/task2/automat";
+import { getToken, issuePass } from "./src/task2/automat.ts";
 
 const token = await getToken(
   "https://dev-1cx8n4rdnv1tkq25.us.auth0.com",
