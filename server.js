@@ -31,8 +31,12 @@ const jwt = checkJwt({ issuerBaseURL: AUTH0_URL, audience: AUTH0_AUDIENCE });
 
 function render(name, values) {
   let html = fs.readFileSync(`${__dirname}/views/${name}.html`, "utf8");
+  console.log(html);
+  console.log("");
   console.log(values);
+  console.log("");
   for (const key in values) {
+    console.log(key);
     const oznaka = "{{" + key + "}}";
     html = html.replaceAll(oznaka, values[key]);
   }
