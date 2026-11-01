@@ -105,8 +105,15 @@ async function getPass(req, res) {
 }
 
 async function createPass(req, res) {
-  const { name, document } = req.body ?? {};
-  if (typeof name !== "string" || typeof document !== "string" || !name.trim() || !document.trim()) {
+  let name;
+  let document;
+
+  if (req.body) {
+    name = req.body.name;
+    document = req.body.document;
+  }
+
+  if (typeof name !== "string" || typeof document !== "string" ||name.trim() === "" || document.trim() === "") {
     return res.sendStatus(400);
   }
 
