@@ -91,6 +91,7 @@ async function infoPage(req, res) {
   }
   res.send(render("info", {
     status: p.status,
+    id: p.id,
     name: p.name,
     document: p.document,
     issuedAt: p.issued_at.toISOString()
