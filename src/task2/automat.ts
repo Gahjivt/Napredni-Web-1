@@ -1,3 +1,4 @@
+import { Buffer } from "node:buffer";
 import { writeFile } from "node:fs/promises";
 
 export async function getToken(
@@ -20,6 +21,7 @@ export async function getToken(
   });
   if (!res.ok) throw new Error(`Greska u getTOken: ${res.status}`);
   return (await res.json()).access_token;
+  
 }
 
 export async function issuePass(
