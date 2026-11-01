@@ -18,7 +18,7 @@ export async function getToken(
       scope
     })
   });
-  if (!res.ok) throw new Error(`Greška ${res.status}`);
+  if (!res.ok) throw new Error(`Greska ${res.status}`);
   return (await res.json()).access_token;
 }
 
@@ -33,7 +33,7 @@ export async function issuePass(
     headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
     body: JSON.stringify({ name, document })
   });
-  if (!res.ok) throw new Error(`Greška ${res.status}`);
+  if (!res.ok) throw new Error(`Greska ${res.status}`);
   const id = res.headers.get("Location")!.split("/").pop();
   await writeFile(`${id}.png`, Buffer.from(await res.arrayBuffer()));
 }

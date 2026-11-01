@@ -65,8 +65,8 @@ async function homePage(req, res) {
     for (const p of list.rows) {
       passesHtml += `
         <p>${p.name} (${p.document}) - ${p.status}</p>
-        <form method="POST" action="/passes/${p.id}/cancel"><button>Poništi</button></form>
-        <form method="POST" action="/passes/${p.id}/delete"><button>Obriši</button></form>`;
+        <form method="POST" action="/passes/${p.id}/cancel"><button>Ponisti</button></form>
+        <form method="POST" action="/passes/${p.id}/delete"><button>Obrisi</button></form>`;
     }
   }
 
