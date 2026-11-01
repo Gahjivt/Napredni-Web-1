@@ -40,7 +40,6 @@ function render(name, values) {
     const oznaka = "{{" + key + "}}";
     html = html.replaceAll(oznaka, values[key]);
   }
-
   return html;
 }
 
